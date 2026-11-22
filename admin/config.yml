@@ -1,0 +1,33 @@
+backend:
+  name: github
+  repo: hannanabid75/tezkhabbar-site
+  branch: main
+
+media_folder: uploads/pdfs
+public_folder: /uploads/pdfs
+
+collections:
+  - name: pdfs
+    label: Daily PDFs
+    files:
+      - name: pdf_list
+        label: PDF Editions
+        file: data/pdfs.json
+        fields:
+          - label: PDFs
+            name: pdfs
+            widget: list
+            summary: "{{fields.section}} - {{fields.date}} - {{fields.title}}"
+            fields:
+              - label: Section
+                name: section
+                widget: select
+                options:
+                  - {label: Daily Newspaper, value: daily}
+                  - {label: Politics, value: politics}
+                  - {label: International, value: international}
+                  - {label: Sports, value: sports}
+                  - {label: Showbiz, value: showbiz}
+              - {label: Title, name: title, widget: string}
+              - {label: Date, name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD"}
+              - {label: PDF file, name: file, widget: file}
