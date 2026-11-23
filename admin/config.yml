@@ -3,31 +3,70 @@ backend:
   repo: hannanabid75/tezkhabbar-site
   branch: main
 
-media_folder: uploads/pdfs
-public_folder: /uploads/pdfs
+media_folder: uploads
+public_folder: /uploads
 
 collections:
-  - name: pdfs
-    label: Daily PDFs
+  - name: sections
+    label: Website Sections
     files:
-      - name: pdf_list
-        label: PDF Editions
-        file: data/pdfs.json
+      - name: daily
+        label: Daily Newspapers
+        file: data/daily.json
         fields:
-          - label: PDFs
-            name: pdfs
+          - label: Boxes
+            name: boxes
             widget: list
-            summary: "{{fields.section}} - {{fields.date}} - {{fields.title}}"
+            summary: "{{fields.title}}"
             fields:
-              - label: Section
-                name: section
-                widget: select
-                options:
-                  - {label: Daily Newspaper, value: daily}
-                  - {label: Politics, value: politics}
-                  - {label: International, value: international}
-                  - {label: Sports, value: sports}
-                  - {label: Showbiz, value: showbiz}
-              - {label: Title, name: title, widget: string}
-              - {label: Date, name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD"}
-              - {label: PDF file, name: file, widget: file}
+              - {label: Title, name: title, widget: string, required: false}
+              - {label: Date text, name: date, widget: string, required: false}
+              - {label: JPG image, name: image, widget: image, required: false, choose_url: false}
+      - name: politics
+        label: Politics
+        file: data/politics.json
+        fields:
+          - label: Boxes
+            name: boxes
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - {label: Title, name: title, widget: string, required: false}
+              - {label: Date text, name: date, widget: string, required: false}
+              - {label: JPG image, name: image, widget: image, required: false, choose_url: false}
+      - name: international
+        label: International
+        file: data/international.json
+        fields:
+          - label: Boxes
+            name: boxes
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - {label: Title, name: title, widget: string, required: false}
+              - {label: Date text, name: date, widget: string, required: false}
+              - {label: JPG image, name: image, widget: image, required: false, choose_url: false}
+      - name: sports
+        label: Sports
+        file: data/sports.json
+        fields:
+          - label: Boxes
+            name: boxes
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - {label: Title, name: title, widget: string, required: false}
+              - {label: Date text, name: date, widget: string, required: false}
+              - {label: JPG image, name: image, widget: image, required: false, choose_url: false}
+      - name: showbiz
+        label: Showbiz
+        file: data/showbiz.json
+        fields:
+          - label: Boxes
+            name: boxes
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - {label: Title, name: title, widget: string, required: false}
+              - {label: Date text, name: date, widget: string, required: false}
+              - {label: JPG image, name: image, widget: image, required: false, choose_url: false}
