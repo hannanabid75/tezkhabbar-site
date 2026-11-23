@@ -21,7 +21,13 @@ collections:
             fields:
               - {label: Title, name: title, widget: string, required: false}
               - {label: Date text, name: date, widget: string, required: false}
-              - {label: JPG image, name: image, widget: image, required: false, choose_url: false}
+              - label: JPG images (up to 8)
+                name: images
+                widget: list
+                label_singular: Image
+                required: false
+                max: 8
+                field: {label: Image, name: image, widget: image, choose_url: false}
       - name: politics
         label: Politics
         file: data/politics.json
