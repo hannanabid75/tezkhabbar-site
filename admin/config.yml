@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: hannanabid75/tezkhabbar
+  repo: hannanabid75/tezkhabbar-site
   branch: main
 
 media_folder: uploads/pdfs
