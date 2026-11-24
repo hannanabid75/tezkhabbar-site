@@ -16,7 +16,17 @@
     },
     {
       "title": "Daily Tez Khabar 2",
-      "image": "/uploads/2.jpg"
+      "image": "/uploads/2.jpg",
+      "images": [
+        "/uploads/today1.jpg",
+        "/uploads/today2.jpg",
+        "/uploads/today3.jpg",
+        "/uploads/today4.jpg",
+        "/uploads/today5.jpg",
+        "/uploads/toay6.jpg",
+        "/uploads/today7.jpg",
+        "/uploads/today8.jpg"
+      ]
     },
     {
       "title": "Daily Tez Khabar 3",
